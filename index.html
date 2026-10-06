@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CertLens - X.509 certificate decoder</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128273;</text></svg>">
+<style>
+body{margin:0;background:#0d1117;color:#e6edf3;font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:48px 20px}
+h1{font-size:34px;margin:0 0 12px}
+p{color:#8b98a9}
+a.btn{display:inline-block;background:#58a6ff;color:#0d1117;font-weight:600;padding:12px 24px;border-radius:8px;text-decoration:none;margin-top:20px}
+ul{color:#8b98a9}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>&#128273; CertLens</h1>
+<p>Paste any PEM X.509 certificate and see what it actually says: subject and issuer names, validity window, key algorithm and size, signature algorithm, SANs, key usages, and SHA-256/SHA-1 fingerprints - decoded by a hand-rolled ASN.1 parser in your browser, never sent anywhere.</p>
+<ul>
+<li>Hand-rolled DER/ASN.1 parser - no libraries</li>
+<li>RSA, ECDSA (P-256/P-384/P-521), Ed25519, DSA keys</li>
+<li>Pure-JS SHA-256/SHA-1 fingerprinting</li>
+<li>Every decoded field verified against openssl (104 automated checks)</li>
+<li>Warnings: expired, self-signed, weak algorithms, small keys</li>
+</ul>
+<a class="btn" href="app.html">Decode a certificate</a>
+</div>
+</body>
+</html>
